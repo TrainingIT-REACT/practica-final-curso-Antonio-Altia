@@ -12,15 +12,16 @@ class Albums extends Component {
   }
 
   componentDidMount() {
+    console.log("albums did mount");
     this.loadAlbums();
   }
 
   render() {
     return (
       <>
-        {this.albumsList != null ? (
+        {this.props.albumsList != null ? (
           <ul>
-            {this.albumsList.map(album => (
+            {this.props.albumsList.map(album => (
               <li>{album.name}</li>
             ))}
           </ul>
@@ -37,7 +38,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  loadAlbums: () => dispatch(loadAlbums)
+  loadAlbums: () => dispatch(loadAlbums())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Albums);

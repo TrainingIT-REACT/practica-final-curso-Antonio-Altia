@@ -9,7 +9,6 @@ class NavBar extends Component {
         return (
         <>
             <NavLink className ="nav_button" to="/home">Inicio</NavLink>
-            <NavLink className ="nav_button" to="/login">Login</NavLink>
             <NavLink className ="nav_button" to="/albums">Albums</NavLink>
             <NavLink className ="nav_button" to="/profile">Perfil</NavLink>
         </>

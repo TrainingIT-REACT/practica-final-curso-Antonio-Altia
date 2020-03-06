@@ -8,7 +8,7 @@ import Playlist from "./playlist/Playlist";
 import Player from "./player/Player";
 import Albums from "./albums/Albums";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Route, NavLink, Redirect } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/Store";
 
@@ -17,8 +17,8 @@ ReactDOM.render(
     <BrowserRouter>
       <div className="block1">
         <main>
+          <Route path="/" exact component={()=><Redirect to="/home"/>} />
           <Route path="/home" exact component={Home} />
-          <Route path="/login" exact component={Login} />
           <Route path="/albums" exact component={Albums} />
           <Route path="/albums/detail" exact component={Login} />
           <Route path="/profile" exact component={Login} />

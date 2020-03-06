@@ -19,7 +19,11 @@ export const initialState = {
     songIdsHistory: []
   },
   albums: {
-    albumsList: null
+    loading:true,
+    albumsList: []
+  },
+  songs: {
+    songsList: []
   },
   playList: {
     songs: []

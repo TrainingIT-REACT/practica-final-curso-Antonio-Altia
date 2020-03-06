@@ -37,7 +37,7 @@ function Login({ doLogin, closeSession, name, songIds, albums }) {
         Soy un miedica bua buaaa y quiero borrar mi historial
       </button>
       <ul className="songs_history">
-        {songIds.map(songId => {
+        {[1,2,3].map(songId => {
           return <li className="song_card">{songId}</li>;
         })}
       </ul>
