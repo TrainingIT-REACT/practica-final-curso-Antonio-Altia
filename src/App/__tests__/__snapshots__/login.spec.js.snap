@@ -1,0 +1,406 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login renders correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Login)>
+    <Login
+      clearHistory={[Function]}
+      closeSession={[Function]}
+      doLogin={[Function]}
+      name={null}
+    >
+      <div
+        className="login"
+      >
+        <h2>
+          Login
+        </h2>
+        <p>
+          Para poder tener acceso a su historial y otras funciones debe loguear con su usuario. Gracias a una tecnología a la vanguardia en los últimos avances en seguridad e identificación, solo tiene que poner su nombre de usuario y el sistema reconocerá si este es el que le corresponde realmente. Haciendo uso para ello de un complejo y sofisticado sistema de confianza ciega
+        </p>
+        <WithStyles(ForwardRef(TextField))
+          inputProps={
+            Object {
+              "aria-label": "username",
+            }
+          }
+          label="Introduzca usuario"
+          placeholder="Nombre de Usuario"
+        >
+          <ForwardRef(TextField)
+            classes={
+              Object {
+                "root": "MuiTextField-root",
+              }
+            }
+            inputProps={
+              Object {
+                "aria-label": "username",
+              }
+            }
+            label="Introduzca usuario"
+            placeholder="Nombre de Usuario"
+          >
+            <WithStyles(ForwardRef(FormControl))
+              className="MuiTextField-root"
+              color="primary"
+              disabled={false}
+              error={false}
+              fullWidth={false}
+              required={false}
+              variant="standard"
+            >
+              <ForwardRef(FormControl)
+                className="MuiTextField-root"
+                classes={
+                  Object {
+                    "fullWidth": "MuiFormControl-fullWidth",
+                    "marginDense": "MuiFormControl-marginDense",
+                    "marginNormal": "MuiFormControl-marginNormal",
+                    "root": "MuiFormControl-root",
+                  }
+                }
+                color="primary"
+                disabled={false}
+                error={false}
+                fullWidth={false}
+                required={false}
+                variant="standard"
+              >
+                <div
+                  className="MuiFormControl-root MuiTextField-root"
+                >
+                  <WithStyles(ForwardRef(InputLabel))>
+                    <ForwardRef(InputLabel)
+                      classes={
+                        Object {
+                          "animated": "MuiInputLabel-animated",
+                          "asterisk": "MuiInputLabel-asterisk",
+                          "disabled": "Mui-disabled",
+                          "error": "Mui-error",
+                          "filled": "MuiInputLabel-filled",
+                          "focused": "Mui-focused",
+                          "formControl": "MuiInputLabel-formControl",
+                          "marginDense": "MuiInputLabel-marginDense",
+                          "outlined": "MuiInputLabel-outlined",
+                          "required": "Mui-required",
+                          "root": "MuiInputLabel-root",
+                          "shrink": "MuiInputLabel-shrink",
+                        }
+                      }
+                    >
+                      <WithStyles(ForwardRef(FormLabel))
+                        className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                        classes={
+                          Object {
+                            "asterisk": "MuiInputLabel-asterisk",
+                            "disabled": "Mui-disabled",
+                            "error": "Mui-error",
+                            "focused": "Mui-focused",
+                            "required": "Mui-required",
+                          }
+                        }
+                        data-shrink={false}
+                      >
+                        <ForwardRef(FormLabel)
+                          className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                          classes={
+                            Object {
+                              "asterisk": "MuiFormLabel-asterisk MuiInputLabel-asterisk",
+                              "colorSecondary": "MuiFormLabel-colorSecondary",
+                              "disabled": "Mui-disabled Mui-disabled",
+                              "error": "Mui-error Mui-error",
+                              "filled": "MuiFormLabel-filled",
+                              "focused": "Mui-focused Mui-focused",
+                              "required": "Mui-required Mui-required",
+                              "root": "MuiFormLabel-root",
+                            }
+                          }
+                          data-shrink={false}
+                        >
+                          <label
+                            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                            data-shrink={false}
+                          >
+                            Introduzca usuario
+                          </label>
+                        </ForwardRef(FormLabel)>
+                      </WithStyles(ForwardRef(FormLabel))>
+                    </ForwardRef(InputLabel)>
+                  </WithStyles(ForwardRef(InputLabel))>
+                  <WithStyles(ForwardRef(Input))
+                    autoFocus={false}
+                    fullWidth={false}
+                    inputProps={
+                      Object {
+                        "aria-label": "username",
+                      }
+                    }
+                    multiline={false}
+                    placeholder="Nombre de Usuario"
+                  >
+                    <ForwardRef(Input)
+                      autoFocus={false}
+                      classes={
+                        Object {
+                          "colorSecondary": "MuiInput-colorSecondary",
+                          "disabled": "Mui-disabled",
+                          "error": "Mui-error",
+                          "focused": "Mui-focused",
+                          "formControl": "MuiInput-formControl",
+                          "fullWidth": "MuiInput-fullWidth",
+                          "input": "MuiInput-input",
+                          "inputMarginDense": "MuiInput-inputMarginDense",
+                          "inputMultiline": "MuiInput-inputMultiline",
+                          "inputTypeSearch": "MuiInput-inputTypeSearch",
+                          "marginDense": "MuiInput-marginDense",
+                          "multiline": "MuiInput-multiline",
+                          "root": "MuiInput-root",
+                          "underline": "MuiInput-underline",
+                        }
+                      }
+                      fullWidth={false}
+                      inputProps={
+                        Object {
+                          "aria-label": "username",
+                        }
+                      }
+                      multiline={false}
+                      placeholder="Nombre de Usuario"
+                    >
+                      <WithStyles(ForwardRef(InputBase))
+                        autoFocus={false}
+                        classes={
+                          Object {
+                            "colorSecondary": "MuiInput-colorSecondary",
+                            "disabled": "Mui-disabled",
+                            "error": "Mui-error",
+                            "focused": "Mui-focused",
+                            "formControl": "MuiInput-formControl",
+                            "fullWidth": "MuiInput-fullWidth",
+                            "input": "MuiInput-input",
+                            "inputMarginDense": "MuiInput-inputMarginDense",
+                            "inputMultiline": "MuiInput-inputMultiline",
+                            "inputTypeSearch": "MuiInput-inputTypeSearch",
+                            "marginDense": "MuiInput-marginDense",
+                            "multiline": "MuiInput-multiline",
+                            "root": "MuiInput-root MuiInput-underline",
+                            "underline": null,
+                          }
+                        }
+                        fullWidth={false}
+                        inputComponent="input"
+                        inputProps={
+                          Object {
+                            "aria-label": "username",
+                          }
+                        }
+                        multiline={false}
+                        placeholder="Nombre de Usuario"
+                        type="text"
+                      >
+                        <ForwardRef(InputBase)
+                          autoFocus={false}
+                          classes={
+                            Object {
+                              "adornedEnd": "MuiInputBase-adornedEnd",
+                              "adornedStart": "MuiInputBase-adornedStart",
+                              "colorSecondary": "MuiInputBase-colorSecondary MuiInput-colorSecondary",
+                              "disabled": "Mui-disabled Mui-disabled",
+                              "error": "Mui-error Mui-error",
+                              "focused": "Mui-focused Mui-focused",
+                              "formControl": "MuiInputBase-formControl MuiInput-formControl",
+                              "fullWidth": "MuiInputBase-fullWidth MuiInput-fullWidth",
+                              "input": "MuiInputBase-input MuiInput-input",
+                              "inputAdornedEnd": "MuiInputBase-inputAdornedEnd",
+                              "inputAdornedStart": "MuiInputBase-inputAdornedStart",
+                              "inputHiddenLabel": "MuiInputBase-inputHiddenLabel",
+                              "inputMarginDense": "MuiInputBase-inputMarginDense MuiInput-inputMarginDense",
+                              "inputMultiline": "MuiInputBase-inputMultiline MuiInput-inputMultiline",
+                              "inputTypeSearch": "MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch",
+                              "marginDense": "MuiInputBase-marginDense MuiInput-marginDense",
+                              "multiline": "MuiInputBase-multiline MuiInput-multiline",
+                              "root": "MuiInputBase-root MuiInput-root MuiInput-underline",
+                            }
+                          }
+                          fullWidth={false}
+                          inputComponent="input"
+                          inputProps={
+                            Object {
+                              "aria-label": "username",
+                            }
+                          }
+                          multiline={false}
+                          placeholder="Nombre de Usuario"
+                          type="text"
+                        >
+                          <div
+                            className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                            onClick={[Function]}
+                          >
+                            <input
+                              aria-invalid={false}
+                              aria-label="username"
+                              autoFocus={false}
+                              className="MuiInputBase-input MuiInput-input"
+                              disabled={false}
+                              onAnimationStart={[Function]}
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onFocus={[Function]}
+                              placeholder="Nombre de Usuario"
+                              required={false}
+                              type="text"
+                            />
+                          </div>
+                        </ForwardRef(InputBase)>
+                      </WithStyles(ForwardRef(InputBase))>
+                    </ForwardRef(Input)>
+                  </WithStyles(ForwardRef(Input))>
+                </div>
+              </ForwardRef(FormControl)>
+            </WithStyles(ForwardRef(FormControl))>
+          </ForwardRef(TextField)>
+        </WithStyles(ForwardRef(TextField))>
+        <WithStyles(ForwardRef(Button))
+          color="primary"
+          onClick={[Function]}
+          variant="contained"
+        >
+          <ForwardRef(Button)
+            classes={
+              Object {
+                "colorInherit": "MuiButton-colorInherit",
+                "contained": "MuiButton-contained",
+                "containedPrimary": "MuiButton-containedPrimary",
+                "containedSecondary": "MuiButton-containedSecondary",
+                "containedSizeLarge": "MuiButton-containedSizeLarge",
+                "containedSizeSmall": "MuiButton-containedSizeSmall",
+                "disableElevation": "MuiButton-disableElevation",
+                "disabled": "Mui-disabled",
+                "endIcon": "MuiButton-endIcon",
+                "focusVisible": "Mui-focusVisible",
+                "fullWidth": "MuiButton-fullWidth",
+                "iconSizeLarge": "MuiButton-iconSizeLarge",
+                "iconSizeMedium": "MuiButton-iconSizeMedium",
+                "iconSizeSmall": "MuiButton-iconSizeSmall",
+                "label": "MuiButton-label",
+                "outlined": "MuiButton-outlined",
+                "outlinedPrimary": "MuiButton-outlinedPrimary",
+                "outlinedSecondary": "MuiButton-outlinedSecondary",
+                "outlinedSizeLarge": "MuiButton-outlinedSizeLarge",
+                "outlinedSizeSmall": "MuiButton-outlinedSizeSmall",
+                "root": "MuiButton-root",
+                "sizeLarge": "MuiButton-sizeLarge",
+                "sizeSmall": "MuiButton-sizeSmall",
+                "startIcon": "MuiButton-startIcon",
+                "text": "MuiButton-text",
+                "textPrimary": "MuiButton-textPrimary",
+                "textSecondary": "MuiButton-textSecondary",
+                "textSizeLarge": "MuiButton-textSizeLarge",
+                "textSizeSmall": "MuiButton-textSizeSmall",
+              }
+            }
+            color="primary"
+            onClick={[Function]}
+            variant="contained"
+          >
+            <WithStyles(ForwardRef(ButtonBase))
+              className="MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+              component="button"
+              disabled={false}
+              focusRipple={true}
+              focusVisibleClassName="Mui-focusVisible"
+              onClick={[Function]}
+              type="button"
+            >
+              <ForwardRef(ButtonBase)
+                className="MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+                classes={
+                  Object {
+                    "disabled": "Mui-disabled",
+                    "focusVisible": "Mui-focusVisible",
+                    "root": "MuiButtonBase-root",
+                  }
+                }
+                component="button"
+                disabled={false}
+                focusRipple={true}
+                focusVisibleClassName="Mui-focusVisible"
+                onClick={[Function]}
+                type="button"
+              >
+                <button
+                  className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiButton-label"
+                  >
+                    Login
+                  </span>
+                  <NoSsr>
+                    <WithStyles(undefined)
+                      center={false}
+                    >
+                      <ForwardRef(TouchRipple)
+                        center={false}
+                        classes={
+                          Object {
+                            "child": "MuiTouchRipple-child",
+                            "childLeaving": "MuiTouchRipple-childLeaving",
+                            "childPulsate": "MuiTouchRipple-childPulsate",
+                            "ripple": "MuiTouchRipple-ripple",
+                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                            "rippleVisible": "MuiTouchRipple-rippleVisible",
+                            "root": "MuiTouchRipple-root",
+                          }
+                        }
+                      >
+                        <span
+                          className="MuiTouchRipple-root"
+                        >
+                          <TransitionGroup
+                            childFactory={[Function]}
+                            component={null}
+                            exit={true}
+                          />
+                        </span>
+                      </ForwardRef(TouchRipple)>
+                    </WithStyles(undefined)>
+                  </NoSsr>
+                </button>
+              </ForwardRef(ButtonBase)>
+            </WithStyles(ForwardRef(ButtonBase))>
+          </ForwardRef(Button)>
+        </WithStyles(ForwardRef(Button))>
+      </div>
+    </Login>
+  </Connect(Login)>
+</Provider>
+`;

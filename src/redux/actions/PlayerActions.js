@@ -1,11 +1,9 @@
 export const PlayerActionTypes = {
   PLAY_SONG: "PLAY_SONG",
-  STOP: "STOP",
-  PAUSE: "PAUSE",
-  NEXT: "NEXT",
-  PREV: "PREV",
-  ACTIVATE: "ACTIVATE",
-  DEACTIVATE: "DEACTIVATE",
+  STOP_PLAYER: "STOP_PLAYER",
+  PAUSE_PLAYER: "PAUSE_PLAYER",
+  ACTIVATE_PLAYER: "ACTIVATE_PLAYER",
+  DEACTIVATE_PLAYER: "DEACTIVATE_PLAYER",
   SET_TIME_MARK: "SET_TIME_MARK"
 };
 
@@ -14,25 +12,17 @@ export const doLogin = name => ({
   name
 });
 
-export const playSong = songId => ({
+export const playSong = song => ({
   type: PlayerActionTypes.PLAY_SONG,
-  songId
+  song
 });
 
 export const stopPlayer = () => ({
-  type: PlayerActionTypes.STOP
+  type: PlayerActionTypes.STOP_PLAYER
 });
 
 export const pausePlayer = () => ({
-  type: PlayerActionTypes.PAUSE
-});
-
-export const nextSong = () => ({
-  type: PlayerActionTypes.NEXT
-});
-
-export const prevSong = () => ({
-  type: PlayerActionTypes.PREV
+  type: PlayerActionTypes.PAUSE_PLAYER
 });
 
 export const activatePlayer = () => ({
@@ -40,7 +30,7 @@ export const activatePlayer = () => ({
 });
 
 export const deactivatePlayer = () => ({
-  type: PlayerActionTypes.DEACTIVATE
+  type: PlayerActionTypes.DEACTIVATE_PLAYER
 });
 
 export const setTimeMark = timeMark => ({

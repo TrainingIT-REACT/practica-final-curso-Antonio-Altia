@@ -2,7 +2,7 @@ import { ProfileActionsTypes } from "../actions/ProfileActions";
 
 const initialState = {
   userName: null,
-  songIdsHistory: []
+  songsHistory: []
 };
 
 export default (state = initialState, action) => {
@@ -12,9 +12,12 @@ export default (state = initialState, action) => {
     case ProfileActionsTypes.CLOSE_SESSION:
       return { ...state, userName: null };
     case ProfileActionsTypes.ADD_SONGS_TO_HISTORY:
-      return { ...state, songIdsHistory: action.songs };
+      return {
+        ...state,
+        songsHistory: [...state.songsHistory, ...action.songs]
+      };
     case ProfileActionsTypes.CLEAR_HISTORY:
-      return { ...state, songIdsHistory: action.songs };
+      return { ...state, songsHistory: [] };
     default:
       return state;
   }

@@ -1,38 +1,91 @@
-import React, {  useRef } from 'react';
-import { connect } from 'react-redux';
+import React, { useRef } from "react";
+import { connect } from "react-redux";
+import IconButton from "@material-ui/core/IconButton";
+import StopIcon from "@material-ui/icons/StopSharp";
+import BackIcon from "@material-ui/icons/SkipPrevious";
+import ForwardIcon from "@material-ui/icons/SkipNext";
 
+//Actions
+import { goNextSong, goPrevSong } from "../redux/actions/PlaylistActions";
+import { playSong } from "../redux/actions/PlayerActions";
 
+function Player({
+  playing,
+  song,
+  timeMark,
+  playlistSongs,
+  currentPlayListIndex,
+  goNextSong,
+  goPrevSong,
+  playSong
+}) {
+  const playerRef = useRef(React.createRef());
 
-function Player({ songId, songsList, timeMark, playlistSongs }) {
-    let playingSong = "";
-    let playingIndex = null;
-    const ref = useRef({current:null});
-    if (ref.current) {
-        ref.current.currentTime = timeMark;
-    }
-    if (songId) {
-        //Se toma la canción actual y su indice
-        playingSong = songsList.find((song, index) => songId === song.id ? playingIndex = index && true:false).audio;
-    }
+  const onClickNext = e => {
+    goNextSong();
+    playSong(playlistSongs[currentPlayListIndex + 1]);
+    playerRef.current.currentTime = 0;
+  };
+  const onClickPrev = e => {
+    goPrevSong();
+    playSong(playlistSongs[currentPlayListIndex - 1]);
+    playerRef.current.currentTime = 0;
+  };
+  const onClickStop = e => {
+    playSong(null);
+  };
 
-    return (
-        <>
-            <button className="player_button back" disabled={(playingIndex != null && playingIndex>0)?false:true}>{`<<`}</button>
-            <button className="player_button stop" disabled={songId == null}>Stop</button>
-            <button className="player_button forward" disabled={(playingIndex != null && playingIndex<playlistSongs.length-1)?false:true}>{`>>`}</button>
-            <audio ref={ref} src={playingSong} controls />
-        </>
-    );
+  return (
+    <>
+      <span> Reproductor </span>
+      <IconButton
+        onClick={onClickPrev}
+        disabled={!(currentPlayListIndex != null && currentPlayListIndex > 0)}
+        aria-label="Cancion previa"
+      >
+        <BackIcon fontSize="large" />
+      </IconButton>
+      <IconButton
+        onClick={onClickStop}
+        disabled={song == null}
+        aria-label="Parar reproduccion"
+      >
+        <StopIcon fontSize="large" />
+      </IconButton>
+      <IconButton
+        onClick={onClickNext}
+        disabled={
+          !(
+            currentPlayListIndex != null &&
+            currentPlayListIndex < playlistSongs.length - 1
+          )
+        }
+        aria-label="Siguiente cancion"
+      >
+        <ForwardIcon fontSize="large" />
+      </IconButton>
+      <br />
+      <audio
+        ref={playerRef}
+        src={song ? song.audio + "?" + currentPlayListIndex : ""}
+        controls
+        autoPlay={playing}
+      />
+    </>
+  );
 }
 const mapStateToProps = state => ({
-    songId: state.player.songId,
-    timeMark: state.player.timeMark,
-    songsList: state.albums.songsList,
-    // playlistSongs: state.playlist.songs,
+  song: state.player.song,
+  playing: state.player.playing,
+  timeMark: state.player.timeMark,
+  playlistSongs: state.playlist.songs,
+  currentPlayListIndex: state.playlist.currentIndex
 });
 
 const mapDispatchToProps = dispatch => ({
-
+  playSong: song => dispatch(playSong(song)),
+  goNextSong: () => dispatch(goNextSong()),
+  goPrevSong: () => dispatch(goPrevSong())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Player);

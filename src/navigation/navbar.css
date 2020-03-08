@@ -1,14 +1,20 @@
-.nav_button{
-    margin:0.2em;
-    padding:0.4em;
-    background-color: salmon;
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10%;
-    font-size:3em;
+.nav_button {
+  text-align: center;
+  margin: 0.1em;
+  padding: 0.4em;
+  border-right: 0.1em solid grey;
+  border-bottom: 0.1em solid grey;
+  background-color: rgb(72, 52, 255);
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.2em;
+  text-transform: uppercase;
+  font-size: 3em;
+}
+.nav_button:hover {
+  background-color: rgb(136, 123, 255);
 }
 
-.nav_button_active{
-
+.nav_button_active {
 }

@@ -8,42 +8,56 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, #root{
+html,
+#root {
+  background-color: rgb(251, 245, 246);
   height: 100vh;
 }
+
+.album_detail {
+  padding: 1em;
+}
+
 main {
   position: relative;
   float: left;
-  width:70%;
+  width: 70%;
   height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-playlist {
+.playlist {
+  background-color: rgb(149, 176, 250);
   position: relative;
   float: right;
-  width:30%;
+  width: 30%;
   height: 100%;
-  background-color: pink;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 nav {
+  vertical-align: middle;
+  text-align: center;
   position: relative;
+  background-color: rgb(149, 176, 250);
   float: left;
   height: 100%;
-  width:70%;
-  background-color: red;
+  width: 70%;
 }
 
-player {
+.player {
   position: relative;
   float: right;
   height: 100%;
-  width:30%;
-  background-color: green;
+  width: 30%;
+  overflow: hidden;
+  text-align: center;
 }
-.block1{
-  height: 70vh;
+.block1 {
+  height: 80vh;
 }
-.block2{
-  height: 30vh;
+.block2 {
+  height: 20vh;
 }

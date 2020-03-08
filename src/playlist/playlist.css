@@ -1,0 +1,12 @@
+.playlist_song.current {
+  font-weight: bold !important;
+  color: white;
+  background-color: rgb(250, 58, 132) !important;
+}
+
+.playlist_song {
+  padding: 16px;
+  margin-top: 0.4em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+}

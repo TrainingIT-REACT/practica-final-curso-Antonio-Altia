@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 
 // Reducers
@@ -6,55 +6,42 @@ import player from "./reducers/PlayerReducer";
 import playlist from "./reducers/PlaylistReducer";
 import albums from "./reducers/AlbumsReducer";
 import profile from "./reducers/ProfileReducer";
+import songs from "./reducers/SongsReducer";
 
 export const initialState = {
   player: {
     active: false,
     timeMark: 0,
-    songId: null,
+    song: null,
     playing: false
   },
   profile: {
     userName: null,
-    songIdsHistory: []
+    songHistory: []
   },
   albums: {
-    loading:true,
+    loading: true,
     albumsList: []
   },
   songs: {
-    songsList: []
+    loading: true,
+    songsList: [],
+    selectedAlbum: null
   },
   playList: {
-    songs: []
+    songs: [],
+    currentIndex: null
   }
 };
 
-export const cloneState = state => {
-  const originalAlbumList = state.albums.albumList;
-  return {
-    player: {
-      ...state.player
-    },
-    profile: {
-      ...state.profile
-    },
-    albums: {
-      albumsList: originalAlbumList ? [...state.albumsList] : null
-    },
-    playList: {
-      ...state.playList,
-      songs: [...state.playList.songs]
-    }
-  };
-};
-
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export const store = createStore(
   combineReducers({
     player,
     profile,
-    albums
+    albums,
+    playlist,
+    songs
   }),
-  applyMiddleware(thunk)
-  /*window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()*/
+  composeEnhancers(applyMiddleware(thunk))
 );

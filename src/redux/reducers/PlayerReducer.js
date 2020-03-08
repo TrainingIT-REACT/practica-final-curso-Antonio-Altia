@@ -3,7 +3,7 @@ import { PlayerActionTypes } from "../actions/PlayerActions";
 const initialState = {
   active: false,
   timeMark: 0,
-  songId: null,
+  song: null,
   playing: false
 };
 
@@ -13,7 +13,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         playing: true,
-        songId: action.songId,
+        song: action.song,
         timeMark: 0
       };
     case PlayerActionTypes.STOP:
@@ -24,15 +24,9 @@ export default (state = initialState, action) => {
       };
     case PlayerActionTypes.PAUSE:
       return {
-        ...state
-      };
-    case PlayerActionTypes.NEXT:
-      return {
-        ...state
-      };
-    case PlayerActionTypes.PREV:
-      return {
-        ...state
+        ...state,
+        playing: false,
+        timeMark: action.timeMark
       };
     case PlayerActionTypes.ACTIVATE:
       return {
